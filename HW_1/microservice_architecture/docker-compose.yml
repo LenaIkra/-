@@ -34,8 +34,8 @@ services:
   plot:
     build:
       context: ./plot
-    container_name: plot
+    restart: always
     depends_on:
       - metric
     volumes:
-      - ./logs:/app/logs
+      - ./logs/:/usr/src/app/logs/
